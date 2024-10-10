@@ -43,7 +43,6 @@ function toRomanModern(romanNum){
     };
     let modernSum = 0;
     for(let i = 0; i < romanNum.length; i++){
-        console.log(`current value is roman num = ${romanNum.charAt(i)} and sum = ${modernSum}`)
         if (i !== romanNum.length -1){
             if(romanNum.charAt(i) === "I" && romanNum.charAt(i +1) === "V"){
                 modernSum += 4;
@@ -61,18 +60,20 @@ function toRomanModern(romanNum){
             if((i + 1) === romanNum.length){
                 return modernSum
             }
-        }else{
-            console.log(`entered on index = ${romanNum.charAt(i)} and sum = ${modernSum}`)
-            modernSum += objectOfRomanValues[romanNum.charAt(i)]
         }
-        
     }
 
     return modernSum;
 }
 
-console.log(toRomanLazy("XVIIII")); //correct due to lazy formatting and no special squencing
+console.log(toRomanLazy("XVIIII")); //19
+console.log(toRomanLazy('IIII')); // 4
+console.log(toRomanLazy('CL')); // 150
+console.log(toRomanLazy('DCCCCXXXXIIII')); // 944 
+console.log()// empty space to split the results
+console.log(toRomanModern('IV')); // 4 
 console.log(toRomanModern("XIV")); //14
-
+console.log(toRomanModern('CL')); // 150 ---------wrong--------
+console.log(toRomanModern('CMXLIV')); // 944 ------wrong--------
 //------------------left off here---------------getting extra value unwanted from the 
 //addition of the last index in line 66
