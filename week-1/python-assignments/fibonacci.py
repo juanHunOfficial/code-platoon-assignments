@@ -8,10 +8,12 @@ def find_fibonacci(number):
         return sequence[1]
     #loop to find the value of the current fibonacci sequence
     #start at 2 because you already have 0 and 1 above
-    for i in range(2, number):
+    #the range as 1 to the number to avoid the out of bounds error (makes the function
+    # inculsive instead of exclusive)
+    for i in range(2, number +1):
         next_value = sequence[i -1] + sequence[i -2]
         sequence.append(next_value)
         
     return sequence[number]
-find_fibonacci(3) # 2
-find_fibonacci(7) # 13
+print(find_fibonacci(3)) # 2
+print(find_fibonacci(7)) # 13
