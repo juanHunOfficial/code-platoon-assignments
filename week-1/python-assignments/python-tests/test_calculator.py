@@ -14,7 +14,7 @@ def test_multiply():
 def test_terminal_output(monkeypatch, capsys):
     # calculator.calculate(10, 2, "multiply")
     monkeypatch.setattr("sys.argv", ["calculator.py", "10", "2", "multiply"])
-    calculator.__main__()
+    calculator.main()
     captured = capsys.readouterr()
     assert captured.out == "Result: 20\n"
 

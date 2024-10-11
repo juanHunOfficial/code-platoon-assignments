@@ -1,6 +1,4 @@
 import sys
-import example_input
-
 
 def calculate(num1, num2, operation):
     if operation == "add":
@@ -15,8 +13,6 @@ def calculate(num1, num2, operation):
         else:
             raise ValueError("Cannot divide by zero")
 def main():
-    print("entered the main function --------------")
-    example_input.intake()
     if len(sys.argv) != 4:
         print("Usage: calculator.py <num1> <num2> <operation>")
         sys.exit(1)
@@ -27,10 +23,8 @@ def main():
 
     result = calculate(num1, num2, operation)
     print(f"Result: {int(result)}")
-    print("exiting the main function---------------")
 
 
 if __name__ == "__main__":
-    print("did not enter the main function yet")
     main()
-    print("finally finished the main function")
+  
