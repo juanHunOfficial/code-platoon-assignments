@@ -7,12 +7,14 @@ def test_subtract():
     assert calculator.calculate(2, 3, "subtract") == -1
     
 def test_multiply():
-    assert calculator.calculate(2, 3, "multiply") == 6
+    assert calculator.calculate(10, 2, "multiply") == 20
 
 # Add more functional tests for subtract, multiply, and divide
 
-def test_terminal_output(capsys):
-    calculator.calculate(10, 2, "multiply")
+def test_terminal_output(monkeypatch, capsys):
+    # calculator.calculate(10, 2, "multiply")
+    monkeypatch.setattr("sys.argv", ["calculator.py", "10", "2", "multiply"])
+    calculator.__main__()
     captured = capsys.readouterr()
     assert captured.out == "Result: 20\n"
 
