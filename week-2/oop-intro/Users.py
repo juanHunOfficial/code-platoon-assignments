@@ -25,6 +25,7 @@ class Users:
         print(f"Done! Your name has been updated to: {_user_db[id_number][0]}")
 
 # master_template = Users("Name", "template@code-platoon.com", "LXXX-XXX-XXX-XX-X")
+# print(master_template)
 # temp_user1 = Users("Juan Hun", "juan_hun@yahoo.com", "H500-555-555-55-5")
 # temp_user2 = Users("Spongebob Squarepants", "bikini-bottom-chef@gmail.com", "H200-222-22-2")
 # temp_user3 = Users("Patrick Theadore Star", "under-a-rock@yahoo.com", "H111-111-123-45-6")
