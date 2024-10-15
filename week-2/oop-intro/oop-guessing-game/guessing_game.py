@@ -15,6 +15,4 @@ class GuessingGame():
     def solved(self):
         if self.guess == self.answer:
             self.solved_prob = True
-        else: 
-            self.solved_prob = False
         return self.solved_prob
