@@ -17,6 +17,7 @@ class CarManager:
     @property    
     def mileage(self) -> int:
         return self._mileage
+    
     @mileage.setter
     def mileage(self, updated_mileage: int) -> None:
         if isinstance(updated_mileage, int) and (updated_mileage > self._mileage):
@@ -25,6 +26,7 @@ class CarManager:
     def print_car_details(self) -> None:
         print(f"For car ID #:{self._id}, it is a {self._year} {self._make} {self._model} with {self._mileage} miles.")
         print(f"The services that have been preformed so far are: {self._services}")
+        
     
     def service_car(self, service_to_add: str) -> None:
         self._services.append(service_to_add)
@@ -37,7 +39,7 @@ highlander = CarManager(1112, "Toyota", "Highlander", 2018, 101002, ["Oil change
 print(CarManager.all_cars)
 print(CarManager.total_cars)
 
-si.print_car_details()
+print(si.print_car_details())
 si.service_car("Totaled car, and replacement")
 si.print_car_details()
 
