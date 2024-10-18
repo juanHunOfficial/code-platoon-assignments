@@ -1,6 +1,6 @@
 import string
 
-def caesar_cipher(string_to_encrypt: str, shift_amount: int) -> None:
+def caesar_cipher(string_to_encrypt: str, shift_amount: int) -> str:
     all_alpha = list(string.ascii_lowercase) + list(string.ascii_uppercase) 
     
     NUMBER_OF_LETTERS_IN_ALPHABET = 26
