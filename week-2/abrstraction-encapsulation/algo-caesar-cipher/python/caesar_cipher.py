@@ -14,7 +14,7 @@ def caesar_cipher(string_to_encrypt: str, shift_amount: int) -> str:
             new_char = (index + shift_amount) % NUMBER_OF_LETTERS_IN_ALPHABET
             
             if char.isupper():
-                encrypted_message += all_alpha[new_char + NUMBER_OF_LETTERS_IN_ALPHABET]
+                encrypted_message += all_alpha[new_char].upper()
             else:
                 encrypted_message += all_alpha[new_char]
                 
